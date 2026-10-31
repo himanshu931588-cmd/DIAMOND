@@ -132,6 +132,13 @@ DIAMOND/
 │       ├── app/components/RiskGauge.tsx   # Semicircular SVG live risk meter
 │       ├── app/components/StatusBar.tsx   # Real-time containment telemetry
 │       └── lib/socket.ts                  # Socket.IO client interface
+│
+└── dashboard/                    # React 19 + TypeScript + Vite + Tailwind CSS Super-Console
+    ├── src/components/nebula/    # D3 force-directed celestial repository graph
+    ├── src/components/timeline/  # Interactive microsecond scrubbing & playback
+    ├── src/components/events/    # Deep syscall inspection & SecurityAlert modals
+    ├── src/components/pages/     # Overview, Sessions, Processes, Intent & Repo Evolution
+    └── src/services/             # Real-time WebSocket telemetry pipeline & normalizer
 ```
 
 ---
@@ -146,7 +153,15 @@ npm run dev
 # Starts backend and Socket.IO on http://localhost:3001
 ```
 
-### 2. Run the Frontend Dashboard
+### 2. Run the DIAMOND Web Dashboard
+```bash
+cd dashboard
+npm install
+npm run dev
+# Interactive Super-Console opens on http://localhost:5173
+```
+
+### 3. Run the Next.js Frontend Control Center (Alternative)
 ```bash
 cd agentsight/frontend
 npm install
