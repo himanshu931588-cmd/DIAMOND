@@ -144,3 +144,4 @@ async fn handle_user_verdict(state: &Arc<DaemonState>, verdict: UserVerdictMessa
         }
     }
 }
+

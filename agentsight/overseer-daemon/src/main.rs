@@ -1,4 +1,4 @@
-// overseer-daemon/src/main.rs — Aegis Ring Overseer Daemon Entry Point
+// overseer-daemon/src/main.rs — DIAMOND Overseer Daemon Entry Point
 //
 // Orchestrates:
 //   1. eBPF LSM skeleton loading and attachment (kernel_bridge)
@@ -45,7 +45,7 @@ pub struct DaemonConfig {
 }
 
 #[derive(Parser, Debug)]
-#[command(name = "aegis-overseer", about = "Aegis Ring — Kernel-Level AI Agent Overseer Daemon")]
+#[command(name = "diamond-overseer", about = "Aegis Ring — Kernel-Level AI Agent Overseer Daemon")]
 struct Cli {
     /// Root directory of the agent's approved workspace
     #[arg(short, long, default_value = "/home/user/workspace")]
@@ -155,7 +155,7 @@ async fn main() -> anyhow::Result<()> {
         sandbox_overlay::init(&state_overlay.config).await;
     });
 
-    info!("All subsystems launched. Aegis Ring is active.");
+    info!("All subsystems launched. DIAMOND is active. Telemetry bridged from eunomia-bpf/agentsight.");
 
     // Wait for any task to complete (or crash)
     tokio::select! {

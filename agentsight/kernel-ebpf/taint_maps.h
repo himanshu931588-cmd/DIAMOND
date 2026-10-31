@@ -1,8 +1,9 @@
 /*
  * taint_maps.h — Shared ABI between Ring-0 eBPF C and Ring-3 Rust userspace
  *
- * Aegis Ring: Kernel-Level AI Agent Overseer
- * Copyright (c) 2026 Aegis Ring Contributors
+ * DIAMOND: Kernel-Level AI Agent Intent & Drift Overseer
+ * Built upon and extending eunomia-bpf/agentsight
+ * Copyright (c) 2026 DIAMOND Contributors (Credits: eunomia-bpf/agentsight)
  *
  * This header defines the taint bitmask constants, map key/value structs,
  * and RingBuffer event layout used by both the eBPF LSM programs and the

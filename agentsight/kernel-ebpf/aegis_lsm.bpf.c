@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0 OR BSD-3-Clause
 /*
- * aegis_lsm.bpf.c — Ring-0 eBPF LSM Circuit Breaker for Aegis Ring
+ * aegis_lsm.bpf.c — Ring-0 eBPF LSM Circuit Breaker for DIAMOND (Extending eunomia-bpf/agentsight)
  *
  * Implements active kernel-level enforcement hooks:
  *   - tp_btf/sched_process_fork  — taint propagation to child processes

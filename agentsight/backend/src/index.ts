@@ -43,14 +43,14 @@ app.get('/api/health', (_req, res) => {
   res.status(200).json({
     status: 'online',
     timestamp: new Date().toISOString(),
-    service: 'AgentSight Core Daemon'
+    service: 'DIAMOND Daemon (Extending eunomia-bpf/agentsight)'
   });
 });
 
 // Start Server
 server.listen(PORT, () => {
   console.log(`=====================================================`);
-  console.log(`  🛡️ AgentSight Security & Containment Engine        `);
+  console.log(`  🛡️ DIAMOND: Kernel-Level AI Agent Overseer        `);
   console.log(`  🚀 Backend running on http://localhost:${PORT}     `);
   console.log(`  ⚡ Socket.IO real-time channel active              `);
   console.log(`=====================================================`);
