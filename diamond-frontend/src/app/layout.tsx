@@ -4,7 +4,7 @@ import './globals.css';
 import { I18nProvider } from '@/i18n/context';
 import AppShell from '@/components/AppShell';
 
-export const metadata: Metadata = { title: 'DIAMOND — Agent Runtime Security' };
+export const metadata: Metadata = { title: 'Proof-of-Agent — DIAMOND' };
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en"><head>

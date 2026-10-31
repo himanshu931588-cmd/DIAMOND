@@ -5,6 +5,7 @@
 
 # testing
 /coverage
+/.poa-test/
 
 # next.js
 /.next/
