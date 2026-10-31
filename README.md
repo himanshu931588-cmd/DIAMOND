@@ -133,12 +133,12 @@ DIAMOND/
 │       ├── app/components/StatusBar.tsx   # Real-time containment telemetry
 │       └── lib/socket.ts                  # Socket.IO client interface
 │
-└── dashboard/                    # React 19 + TypeScript + Vite + Tailwind CSS Super-Console
-    ├── src/components/nebula/    # D3 force-directed celestial repository graph
-    ├── src/components/timeline/  # Interactive microsecond scrubbing & playback
-    ├── src/components/events/    # Deep syscall inspection & SecurityAlert modals
-    ├── src/components/pages/     # Overview, Sessions, Processes, Intent & Repo Evolution
-    └── src/services/             # Real-time WebSocket telemetry pipeline & normalizer
+└── diamond-frontend/             # Production Next.js 15 Observability & Security UI (AgentSight)
+    ├── src/app/                  # App Router (/, /overview, /sessions, /timeline, /tree, /logs, /metrics)
+    ├── src/components/           # FleetOverview, SessionWorkspace, ProcessTreeView, Timeline
+    ├── src/lib/                  # Daemon direct nodeClient & cloud controllerClient
+    ├── src/utils/                # eBPF event parsers, stdio parser, JSON diff & session data
+    └── public/                   # Pre-recorded snapshot data & assets for offline demo mode
 ```
 
 ---
@@ -153,20 +153,12 @@ npm run dev
 # Starts backend and Socket.IO on http://localhost:3001
 ```
 
-### 2. Run the DIAMOND Web Dashboard
+### 2. Run the DIAMOND Frontend
 ```bash
-cd dashboard
+cd diamond-frontend
 npm install
 npm run dev
-# Interactive Super-Console opens on http://localhost:5173
-```
-
-### 3. Run the Next.js Frontend Control Center (Alternative)
-```bash
-cd agentsight/frontend
-npm install
-npm run dev
-# Dashboard opens on http://localhost:3000
+# UI opens on http://localhost:3000
 ```
 
 ### 3. Run Ring-0 eBPF & Rust Daemon (Linux Kernel 5.7+ with CONFIG_BPF_LSM=y)
