@@ -1,0 +1,17 @@
+[package]
+name = "aegis-kernel-ebpf"
+version = "0.1.0"
+edition = "2021"
+description = "Aegis Ring — eBPF LSM kernel enforcer skeleton"
+build = "build.rs"
+
+[build-dependencies]
+libbpf-cargo = "0.24"
+
+[dependencies]
+# No runtime dependencies — this crate only provides the generated skeleton
+# that is consumed by overseer-daemon via `include!()`.
+
+[features]
+default = []
+

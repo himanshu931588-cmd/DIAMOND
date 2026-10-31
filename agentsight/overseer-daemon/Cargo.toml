@@ -1,0 +1,53 @@
+[package]
+name = "overseer-daemon"
+version = "0.1.0"
+edition = "2021"
+description = "Aegis Ring — Userspace overseer daemon with eBPF LSM bridge"
+
+[dependencies]
+# eBPF skeleton loading and map manipulation
+libbpf-rs = "0.24"
+
+# Async runtime for concurrent ringbuf polling, IPC, and socket handling
+tokio = { version = "1", features = ["full"] }
+
+# Unix signal handling and process control (SIGSTOP/SIGCONT/SIGKILL)
+nix = { version = "0.29", features = ["signal", "process", "fs", "mount"] }
+
+# JSON serialization for IPC events and audit logs
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+# WebSocket server for Tauri desktop interceptor modal
+tokio-tungstenite = "0.24"
+futures-util = "0.3"
+
+# Structured logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+
+# Unix domain socket for AgentSight telemetry ingestion
+tokio-stream = "0.1"
+
+# UUID generation for event correlation IDs
+uuid = { version = "1", features = ["v4"] }
+
+# Timestamp formatting
+chrono = { version = "0.4", features = ["serde"] }
+
+# Cross-thread shared state
+dashmap = "6"
+
+# CLI argument parsing
+clap = { version = "4", features = ["derive"] }
+
+# Path canonicalization and inode resolution
+walkdir = "2"
+
+[build-dependencies]
+libbpf-cargo = "0.24"
+
+[[bin]]
+name = "aegis-overseer"
+path = "src/main.rs"
+
