@@ -1,0 +1,75 @@
+/* ============================================
+   DIAMOND Design System — CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* ── Backgrounds ── */
+  --bg-main: #05090C;
+  --bg-secondary: #080E12;
+  --bg-panel: #080D11;
+  --bg-hover: #0D171A;
+  --bg-elevated: #0A1318;
+
+  /* ── Borders ── */
+  --border-default: #142127;
+  --border-strong: #1D3035;
+  --border-active: #284A47;
+
+  /* ── Text ── */
+  --text-primary: #D8E0E5;
+  --text-secondary: #89969E;
+  --text-muted: #56636C;
+
+  /* ── Primary Accents ── */
+  --accent-mint: #72E0BE;
+  --accent-green: #3FAF94;
+  --accent-cyan: #55C9CB;
+
+  /* ── Event Colors ── */
+  --event-read: #D1DCE3;
+  --event-write: #F08C72;
+  --event-create: #57D8B2;
+  --event-rename: #54C7D0;
+  --event-delete: #D66D83;
+  --event-commit: #E2CE83;
+  --event-warning: #E6B85C;
+  --event-blocked: #F06C76;
+  --event-allowed: #57D8B2;
+
+  /* ── Severity ── */
+  --severity-info: #55C9CB;
+  --severity-low: #72E0BE;
+  --severity-medium: #E6B85C;
+  --severity-high: #F08C72;
+  --severity-critical: #F06C76;
+
+  /* ── Typography ── */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-heading: 28px;
+  --text-section: 11px;
+  --text-body: 13px;
+  --text-meta: 10px;
+  --text-large-number: 22px;
+
+  /* ── Spacing ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+
+  /* ── Radii ── */
+  --radius-sm: 3px;
+  --radius-md: 5px;
+  --radius-lg: 8px;
+  --radius-pill: 100px;
+
+  /* ── Transitions ── */
+  --transition-fast: 120ms ease;
+  --transition-normal: 200ms ease;
+  --transition-slow: 350ms ease;
+}
